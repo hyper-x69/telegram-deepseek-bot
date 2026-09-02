@@ -12,8 +12,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Config from environment variables
-TELEGRAM_BOT_TOKEN = os.getenv("8965194214:AAFfyDZXhTR3XL18ZKMMGIhg0GVms4fr0aQ")
-DEEPSEEK_API_KEY = os.getenv("sk-poolai-b154971240885de18b53d39b2b4fe82017eefea3734397a5")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 
 if not TELEGRAM_BOT_TOKEN or not DEEPSEEK_API_KEY:
     raise ValueError("Missing TELEGRAM_BOT_TOKEN or DEEPSEEK_API_KEY")
@@ -37,11 +37,11 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Help command"""
     await update.message.reply_text(
         "আমি DeepSeek AI বট। আমি:\n"
-        "• প্রশ্নর উত্তর দিতে পারি\n"
+        "• প্রশ্নের উত্তর দিতে পারি\n"
         "• গল্প বলতে পারি\n"
-        "• কড লিখতে পারি\n"
+        "• কোড লিখতে পারি\n"
         "• যেকোনো কিছু ব্যাখ্যা করতে পারি\n\n"
-        "শুধু আমাকে কছু বলুন!"
+        "শুধু আমাকে কিছু বলুন!"
     )
 
 async def clear_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
