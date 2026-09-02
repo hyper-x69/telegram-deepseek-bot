@@ -12,8 +12,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Config from environment variables
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+TELEGRAM_BOT_TOKEN = os.getenv("8965194214:AAFfyDZXhTR3XL18ZKMMGIhg0GVms4fr0aQ")
+DEEPSEEK_API_KEY = os.getenv("sk-poolai-b154971240885de18b53d39b2b4fe82017eefea3734397a5")
 
 if not TELEGRAM_BOT_TOKEN or not DEEPSEEK_API_KEY:
     raise ValueError("Missing TELEGRAM_BOT_TOKEN or DEEPSEEK_API_KEY")
